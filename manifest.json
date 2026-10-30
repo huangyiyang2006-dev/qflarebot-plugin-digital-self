@@ -1,0 +1,62 @@
+{
+  "name": "digital-self",
+  "version": "0.1.0",
+  "apiVersion": 3,
+  "permissions": [
+    "db"
+  ],
+  "depends": {},
+  "conflicts": [],
+  "commands": [],
+  "regex": [],
+  "events": [
+    {
+      "event": [
+        "qq.c2c.message"
+      ]
+    }
+  ],
+  "buttons": [],
+  "cron": [],
+  "routes": [],
+  "hasMiddleware": false,
+  "services": [],
+  "durableObjects": [],
+  "displayName": "数字分身",
+  "description": "仅管理员私聊的 DeepSeek 数字分身",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "title": "DeepSeek API Key",
+        "writeOnly": true,
+        "default": ""
+      },
+      "model": {
+        "type": "string",
+        "title": "模型名称",
+        "description": "默认 deepseek-flash；聊天请求关闭思考模式",
+        "default": "deepseek-flash"
+      },
+      "persona": {
+        "type": "string",
+        "title": "人格与说话风格",
+        "format": "textarea",
+        "default": ""
+      },
+      "memory": {
+        "type": "string",
+        "title": "长期记忆摘要",
+        "format": "textarea",
+        "default": ""
+      }
+    }
+  },
+  "defaultConfig": {
+    "apiKey": "",
+    "model": "deepseek-flash",
+    "persona": "",
+    "memory": ""
+  }
+}
